@@ -1,0 +1,533 @@
+
+:root {
+    --color-blue: #219ebc;
+    --color-dark-blue: #023047;
+    --color-yellow: #ffb703;
+    --color-orange: #fb8500;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--color-dark-blue);
+    display: grid;
+    grid-template-columns: 700px 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+header img {
+    display: block;
+    padding: 0 5px;
+    width: 50px;
+    height: 50px;
+    margin: 0  0 0 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+}
+
+header nav a {
+    color: var(--color-orange);
+    position: relative;
+    transition: all .25s ease;
+}
+
+header nav a::after {
+    content: "";
+    background:var(--color-yellow);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transform: scalex(0);
+    transition: all .25s ease;
+}
+
+header nav a:hover {
+    color: var(--color-yellow);
+}
+
+header nav a:hover::after {
+    transform: scalex(1);
+}
+
+body {
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Langar", system-ui; 
+    font-size: 20px;  
+    color: var(--color-blue);
+}
+
+h2 {
+    color: var(--color-dark-blue);
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.hero h1 {
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    line-height: 70px; 
+    font-size: 36px;
+    background-color: rgba(2, 48, 71, 0.6);
+    color: white;
+    top: 40px;
+}   
+
+article {
+    width: 500px;
+    bottom: 20px;
+    right: 20px;
+    position: absolute;
+    background-color: rgba(33, 158, 188, 0.2);
+}
+
+article p {
+    color: black;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-align: right;   
+}
+
+article img {
+    max-width: 30%;
+    padding: 15px;
+    height: auto;
+    float: right;
+
+}
+
+.sociallinks a {
+    display: block;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+}
+
+.history {
+    padding: 40px;
+}
+
+.history-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.history-content img {
+    display: block;
+    width: 500px;
+    padding: 20px;
+}
+
+.adventure {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.adventure figure {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}  
+
+.adventure img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+
+}
+
+footer {
+    max-width: 100%;
+    height: 100px;
+    background: var(--color-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--color-orange);
+    position: absolute;
+    font-weight: 700;
+}
+
+
+.sociallinks {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    background-attachment: fixed;
+}
+
+.sociallinks a {
+    width: 40px;
+    height: auto;
+}
+
+.wireframe {
+    position: relative;
+    color: var(--color-orange);
+}
+
+footer div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+}
+
+.contacts {
+    margin: 40px 40px;
+    width: 500px;
+    align-items: center;
+}
+
+.contact {
+    margin: 40px 40px;
+    width: 420px;
+    display: flex;
+    align-items: center;
+}
+
+.contact img {
+    padding: 0 40px;
+}
+
+main iframe {
+    margin: 40px 0;
+    width: 500px;
+    height: 150px;
+} 
+
+.main-contacts {
+    width: 100%;
+    display: flex;
+}
+
+.team {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.team figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--color-dark-blue);
+}  
+
+.team img {
+    height: 80px;
+    padding: 0 20px;
+}
+
+.team figcaption {
+    font-size: small;
+}
+
+.form-container {
+    width: 100%;
+    margin: 40px;
+    background-color: rgba(33, 158, 188, 0.2);
+    box-shadow: 0 4px 10px rgba(10, 10, 10, 0.2);
+    border-radius: 30px;
+}
+
+form {
+    display: grid;
+    margin: 0 40px;
+    
+}
+
+.row1 {
+    margin: 20px;
+    
+}
+
+.row1 input {
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border: none;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+.row1 label {
+    padding: 10px 0;
+}
+
+.row2 {
+    margin: 10px 20px;
+}
+
+.row2 label {
+    padding: 0 10px;
+}
+
+textarea {
+    border: none;
+    border-radius: 5px;
+    margin: 0 20px;
+    padding: 10px;
+}
+
+.checkbox {
+    margin: 0 20px;
+    padding: 10px;
+}
+
+button {
+    margin: 20px auto;
+    background-color: var(--color-dark-blue);
+    color: var(--color-dark-blue);
+    font-weight: 500;
+    border: none;
+    border-radius: .5rem;
+    padding: .75rem;
+    font-size: 1.2rem;
+    width: 200px;
+    
+}
+
+button:hover {
+    background-color: var(--color-orange);
+}
+
+.tours {
+    max-width: 100%;
+    padding: 40px;
+    background-color: var(--color-dark-blue);
+}
+
+.tours img {
+    width: 600px;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(10, 10, 10, 0.2)
+}
+
+.tours p {
+    color: whitesmoke;
+}
+
+.tours h3 {
+    color: whitesmoke;
+    margin: 10px 0;
+}
+
+.details-container {
+    padding: 10px 20px;
+}
+
+.tours button {
+    background-color: var(--color-orange);
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    font-size: medium;
+}
+
+.tours button:hover {
+    background-color: var(--color-yellow);
+}
+
+ .tour {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin: 40px;
+ }
+
+ .tour1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin: 40px;
+ }
+
+ .newsletter {
+    width: 700px;
+    margin: auto;
+    margin-bottom: 40px;
+    background-color: rgba(33, 158, 188, 0.2);
+    box-shadow: 0 4px 10px rgba(10, 10, 10, 0.2);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+ }
+
+ .newsletter input {
+    width: 620px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 10px;
+    margin: 10px 0;
+    position: absolute;
+ }
+
+ button {
+    position: relative;
+    width: 150px;
+    height: 40px; 
+    align-items: center;
+    font-size: medium;
+    background-color: var(--color-orange);
+ }
+
+ button:hover {
+    background-color: var(--color-yellow);
+}
+
+ .newsletter button {
+    left: 230px;
+    bottom: 5px;
+ }
+
+ .newsletter button:hover {
+    background-color: var(--color-yellow);
+}
+
+ .input {
+    display: flex;
+ }
+
+ .newsletter p {
+    color: var(--color-dark-blue);
+    padding: 0 40px;
+    font-weight: 700;
+ }
+
+ .info {
+    color: var(--color-dark-blue);
+    font-size: larger;
+    text-align: center;
+    margin: 0 80px;
+    padding-bottom: 40px;
+ }
+
+ #trip-table {
+    text-align: center;
+    padding: 40px;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+th {
+    background-color: var(--color-dark-blue);
+    color: var(--color-orange);
+}
+
+.cta-container {
+    text-align: center;
+    color: var(--color-dark-blue);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cta-container h2 {
+    color: var(--color-dark-blue);
+}
+
+#trips {
+    text-align: center;
+    padding: 40px;
+}
+
+.trip-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trip-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 300px;
+    text-align: left;
+}
+
+.trip-card img {
+    width: 100%;
+    height: auto;
+}
+
+.trip-card h3 {
+    margin: 10px;
+    color: var(--color-dark-blue);
+}
+
+.trip-card p {
+    margin: 10px;
+    color: #555;
+}
+
+.trip-card button {
+    margin: 10px;
+}
+
